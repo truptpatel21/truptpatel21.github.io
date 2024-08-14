@@ -193,7 +193,7 @@
             <img src="assets\pdeu2.png" alt="Project 2">
             <p class="title2">B Tech. ICT : 2021-2025</p>
         </div>
-        <div class="project-card2" onclick="openLink('https://www.udemy.com/course/datastructurescncpp/?couponCode=LEARNNOWPLANS')">
+        <!-- <div class="project-card2" onclick="openLink('https://www.udemy.com/course/datastructurescncpp/?couponCode=LEARNNOWPLANS')">
             <img src="assets\udemy.jpg" alt="Project 2">
             <p class="title2">Udemy - DSA</p>
         </div>
@@ -201,25 +201,32 @@
         <div class="project-card2" onclick="openLink('https://aws.amazon.com/console/')">
             <img src="assets\aws.jpg" alt="Project 1">
             <p class="title2">AWS - Cloud Computing - Traniee</p>
-        </div>
+        </div> -->
 
-        <div class="project-card2" onclick="openLink('https://drive.google.com/file/d/1St4zDjCdKYPRA5qd_4L_aR_32n_KgDVL/view?usp=drive_link')" >
-            <img src="assets\nptel.png" alt="Project 2">
+        <div class="project-card2" onclick="openModal('assets/nptel.jpg')">
+            <img src="assets/nptel.png" alt="NPTEL Certificate">
             <p class="title2">NPTEL - Privacy and Security in Online Social Media</p>
         </div>
-
-        <div class="project-card2" onclick="openLink('https://drive.google.com/file/d/1l_YBz9RPbxf-w63BunqQZnd4qg1XfXST/view?usp=drive_link')">
-            <img src="assets\great.png" alt="Project 1">
+    
+        <div class="project-card2" onclick="openModal('assets/dataScience.jpg')">
+            <img src="assets/great.png" alt="Great Learning Certificate">
             <p class="title2">Great Learning - Data Science Foundation</p>
         </div>
-
-        <div class="project-card2" onclick="openLink('https://drive.google.com/file/d/1cxE44sytudKXIwMpHa6jkRhZUxQyYQCQ/view?usp=drive_link')">
-            <img src="assets\chegg.png" alt="Project 1">
+    
+        <div class="project-card2" onclick="openModal('assets/chegg.jpg')">
+            <img src="assets/chegg.png" alt="Chegg Certificate">
             <p class="title2">Chegg - Python for Software Engineering</p>
         </div>
-        <div class="project-card2" onclick="openLink('https://drive.google.com/file/d/1lNLsM9ueHJxTR5m5Cv_MZd13kc0BBhPK/view?usp=drive_link')">
-            <img src="assets\great.png" alt="Project 1">
+    
+        <div class="project-card2" onclick="openModal('assets/devOps.jpg')">
+            <img src="assets/great.png" alt="DevOps Certificate">
             <p class="title2">Great Learning - Introduction to DevOps</p>
+        </div>
+    
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
         </div>
         
         
@@ -238,7 +245,7 @@
 
     <div class="projects-container2">
 
-        <div class="project-card2" onclick="openLink('https://neurapses.com/portfolio/')">
+        <div class="project-card2" onclick="openModal('assets/neurapses.jpg')">
 
             <img src="assets\neuro.png" alt="Project 2">
             <p class="title2">Neurapses Technology Pvt. Ltd. - Software Engineer Internship</p>
@@ -270,7 +277,8 @@
     
 
     <div class="bottom-footer ">
-        <p style="color: white;margin: auto; text-align: center; ">Copyright &copy Trupt  2024 - All Rights Reserved</p>
+        <p style="color: white;margin: auto; text-align: center; ">Copyright &copy Trupt  2024 - All Rights Reserved
+        </p>
     </div>
 
 
@@ -294,8 +302,21 @@
             function openPDF(pdfPath) {
     window.open(pdfPath, '_blank');
 
+    }
+
+    function openModal(imageSrc) {
+  var modal = document.getElementById("imageModal");
+  var modalImage = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImage.src = imageSrc;
+}
+
+function closeModal() {
+  var modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
+
     
-  }
     </script>
 
 </body>
